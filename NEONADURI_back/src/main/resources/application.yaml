@@ -1,0 +1,48 @@
+server:
+  port:
+    7070
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-type: PKCS12
+    key-store-password: ssafyA702
+
+spring:
+  redis:
+    host: j7a702.p.ssafy.io
+    port: 6379
+    timeout: 6
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://neonaduri-db.c2k2xt6qu8x0.ap-northeast-2.rds.amazonaws.com:3306/neonaduri?serverTimezone=Asia/Seoul
+    username: NEONADURI_admin
+    password: ssafyA702
+    hikari:
+      idle-timeout: 10000
+      connection-timeout: 10000
+      validation-timeout: 10000
+      max-lifetime: 580000
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+    open-in-view: false
+
+cloud:
+  aws:
+    s3:
+      bucket: neonaduri
+    region:
+      static: ap-northeast-2
+    credentials:
+      accessKey: AKIAVVSSTXJTQ36A5EH5
+      secretKey: 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
+    stack:
+      auto: false
