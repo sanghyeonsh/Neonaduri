@@ -41,8 +41,5 @@ cloud:
       bucket: neonaduri
     region:
       static: ap-northeast-2
-    credentials:
-      accessKey: AKIAVVSSTXJTQ36A5EH5
-      secretKey: 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
     stack:
       auto: false
